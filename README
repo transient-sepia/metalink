@@ -1,0 +1,11 @@
+Python version 2.7 (32bit) with the following module needed: lxml.
+
+Just a reminder that you need to have a printable version of a metalink article saved.
+
+usage: metalink.py [-h] -f FILE
+
+Strips off printable versions of metalink articles of unnecessary stuff.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  metalink article name
