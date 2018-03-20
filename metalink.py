@@ -1,5 +1,5 @@
 # metalink-chan
-# version 1.0
+# version 1.01
 #
 # / i am not sure what i expected. /
 #
@@ -47,6 +47,9 @@ for line in original:
     footer = re.search(r"Didn't find what you are looking for\?", line)
     if footer:
         line = re.sub(r"Didn't find what you are looking for\?", "", line)
+    header = re.search(r"Copyright \(c\) 20(\d){2}, Oracle\. All rights reserved\.", line)
+    if header:
+        line = re.sub(r"Copyright \(c\) 20(\d){2}, Oracle\. All rights reserved\.", "", line)
     html = html+line
 original.close()
 shutil.move(filename,'original\\'+filename)
